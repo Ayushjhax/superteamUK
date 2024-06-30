@@ -1,4 +1,3 @@
-```markdown
 # AI-Powered Context-Aware Blockchain Explorer
 
 ## Project Demo
@@ -70,4 +69,3 @@ GitHub: [@Ayushjhax](https://github.com/Ayushjhax)
 ## Contact
 
 For any questions or feedback, feel free to reach out to us at [ayushkmrjha@gmail.com](mailto:ayushkmrjha@gmail.com).
-```
