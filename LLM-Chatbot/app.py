@@ -7,11 +7,11 @@ from cohere import ChatMessage
 app = Flask(__name__)
 
 # Initialize Cohere client
-co = cohere.Client('T7E5YdqYVduosUnRrTAGvimDFbrSXFSdUOmk3nHA')  # Replace with your actual API key
+co = cohere.Client('T7E5YdqYVduosUnRrTAGvimDFbrSXFSdUOmk3nHA')  
 
 # Define the reference text
 reference_text = """
-This webpage provides transaction details for a successful transaction on the Solana blockchain. The transaction occurred approximately one minute ago, at 7:44 PM UTC on June 28, 2024. The signer of the transaction was "26cnPXNAAFs1oGuFpsgnjbB4ym9YkcMMdd7Z48hr5yyY", and the fee for the transaction was 0.000005. The transaction version is listed as "legacy", and the previous block hash is given as "FHWbRLu5tfsdEPcBNpzxmc6hN1P43wAXxJW9mnjpdrrq". The notes and instruction details for the transaction are not provided in the summary. The balance changes for the addresses involved in the transaction are listed, with no change in SOL balance for the signer address and a small decrease in SOL balance for the fee payer address. The token balance change is not applicable for this transaction, as indicated by the "No data" entry.
+The webpage provides information about the USD Coin (USDC) token on the Jupiter platform. The token has a current price of $1.00, a market cap of $32.3 billion, and a 24-hour volume of $2.8 billion. The webpage also includes details such as the current supply, decimals, mint authority, freeze authority, token extension, and owner. It provides a list of recent transactions, metadata, pools, and distribution information. The status of the transactions is indicated as "Success," and the transaction details include the transaction hash, method, block, age, instructions, value, transaction fee, and tokens involved. The webpage also includes links to explore more features and tools on the Jupiter platform.
 """
 
 # Define the preamble
