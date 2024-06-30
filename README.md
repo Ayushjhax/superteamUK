@@ -69,4 +69,4 @@ GitHub: [@Ayushjhax](https://github.com/Ayushjhax)
 
 ## Contact
 
-For any questions or feedback, feel free to reach out to us at [ayushkmrjha@gmail.com](mailto:ayushkmrjha@gmail.com).
+For any questions or feedback, feel free to reach out to [ayushkmrjha@gmail.com](mailto:ayushkmrjha@gmail.com).
