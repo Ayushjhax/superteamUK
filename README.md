@@ -54,7 +54,9 @@ In future iterations, we aim to integrate Firebase to enable direct text referen
     http://localhost:5000
     ```
 
-##Screenshots
+
+## Screenshots
+
 <img width="1206" alt="image" src="https://github.com/Ayushjhax/superteamUK/assets/116433617/b2963879-032a-47a6-a789-9109749399b3">
 <img width="626" alt="image" src="https://github.com/Ayushjhax/superteamUK/assets/116433617/c1661d46-c3eb-40c7-89b3-05371c6e5ff8">
 <img width="308" alt="image" src="https://github.com/Ayushjhax/superteamUK/assets/116433617/e90ca973-c369-4aaa-9972-1f2c3e801279">
