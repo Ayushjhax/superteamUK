@@ -30,6 +30,7 @@
             userMessage.classList.add('user-message');
             userMessage.textContent = userInput;
             chatBox.appendChild(userMessage);
+            chatBox.scrollTop = chatBox.scrollHeight;
 
             fetch('/chat', {
                 method: 'POST',
