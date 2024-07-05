@@ -12,15 +12,22 @@
         <h1>Solana Blockchain Chat Assistant</h1>
         <div class="chat-box" id="chat-box">
         </div>
+        <form id="user-input-form">
         <div class="input-container">
-            <input type="text" id="user-input" placeholder="Type your message here...">
-            <button onclick="sendMessage()">
-                <i class="fas fa-paper-plane"></i> Send
-            </button>
+                <input type="text" id="user-input" placeholder="Type your message here...">
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
         </div>
+    </form>
     </div>
 
     <script>
+        document.getElementById('user-input-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            sendMessage();
+        });
+
         function sendMessage() {
             const userInput = document.getElementById('user-input').value;
             if (userInput === '') return;
@@ -28,8 +35,16 @@
             const chatBox = document.getElementById('chat-box');
             const userMessage = document.createElement('div');
             userMessage.classList.add('user-message');
-            userMessage.textContent = userInput;
+            userMessage.innerHTML = `<div class="header">User</div>${userInput}`;
             chatBox.appendChild(userMessage);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // add a bot is thinking message for the user
+            const loading = document.createElement('div');
+            loading.classList.add('bot-message');
+            loading.textContent = 'Bot is typing...';
+            chatBox.appendChild(loading);
+            chatBox.scrollTop = chatBox.scrollHeight;
 
             fetch('/chat', {
                 method: 'POST',
@@ -40,9 +55,12 @@
             })
             .then(response => response.json())
             .then(data => {
+                // remove the bot is thinking message 
+                chatBox.removeChild(loading);
+
                 const botMessage = document.createElement('div');
                 botMessage.classList.add('bot-message');
-                botMessage.textContent = data.response;
+                botMessage.innerHTML = `<div class="header">Bot</div>${data.response}`;
                 chatBox.appendChild(botMessage);
                 chatBox.scrollTop = chatBox.scrollHeight;
             });

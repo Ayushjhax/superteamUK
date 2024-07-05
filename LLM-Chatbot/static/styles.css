@@ -32,6 +32,8 @@ h1 {
     border-radius: 8px;
     margin-bottom: 20px;
     background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
 }
 
 .user-message, .bot-message {
@@ -40,18 +42,33 @@ h1 {
     border-radius: 20px;
     font-size: 14px;
     line-height: 1.4;
+    color: #2e2e2e;
 }
 
+
 .user-message {
-    background-color: #d1e7dd;
+    background-color: #d4d4d4;
     text-align: right;
     align-self: flex-end;
 }
 
 .bot-message {
-    background-color: #f8d7da;
+    /* width: 50%; */
+    background-color: #d7dcf8;
     text-align: left;
     align-self: flex-start;
+}
+
+.user-message::first-line, .bot-message::first-line {
+    font-weight: 600;
+}
+
+.user-message::first-line {
+    color: #313131;
+}
+
+.bot-message::first-line {
+    color: #0011a7;
 }
 
 .input-container {
