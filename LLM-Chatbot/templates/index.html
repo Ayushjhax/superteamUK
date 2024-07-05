@@ -39,6 +39,13 @@
             chatBox.appendChild(userMessage);
             chatBox.scrollTop = chatBox.scrollHeight;
 
+            // add a bot is thinking message for the user
+            const loading = document.createElement('div');
+            loading.classList.add('bot-message');
+            loading.textContent = 'Bot is typing...';
+            chatBox.appendChild(loading);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
             fetch('/chat', {
                 method: 'POST',
                 headers: {
@@ -48,6 +55,9 @@
             })
             .then(response => response.json())
             .then(data => {
+                // remove the bot is thinking message 
+                chatBox.removeChild(loading);
+
                 const botMessage = document.createElement('div');
                 botMessage.classList.add('bot-message');
                 botMessage.innerHTML = `<div class="header">Bot</div>${data.response}`;
