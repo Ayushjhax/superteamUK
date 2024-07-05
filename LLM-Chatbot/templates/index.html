@@ -35,7 +35,7 @@
             const chatBox = document.getElementById('chat-box');
             const userMessage = document.createElement('div');
             userMessage.classList.add('user-message');
-            userMessage.textContent = userInput;
+            userMessage.innerHTML = `<div class="header">User</div>${userInput}`;
             chatBox.appendChild(userMessage);
             chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -50,7 +50,7 @@
             .then(data => {
                 const botMessage = document.createElement('div');
                 botMessage.classList.add('bot-message');
-                botMessage.textContent = data.response;
+                botMessage.innerHTML = `<div class="header">Bot</div>${data.response}`;
                 chatBox.appendChild(botMessage);
                 chatBox.scrollTop = chatBox.scrollHeight;
             });
